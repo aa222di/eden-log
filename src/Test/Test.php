@@ -5,7 +5,7 @@
  *
  **/
 
-namespace Eden\Test;
+namespace Toeswade\Test;
 
 class Test
 {
@@ -14,7 +14,7 @@ class Test
 	private $test2; // Int, number of seconds for sleep in test 2
 	private $logger;
 
-	public function __construct($secondsForTest1 = 2, $secondsForTest2 = 4, \Eden\Log\Clog $Clog) {
+	public function __construct($secondsForTest1 = 2, $secondsForTest2 = 4, \Toeswade\Log\Clog $Clog) {
 		$this->test1 = $secondsForTest1;
 		$this->test2 = $secondsForTest2;
 		$this->logger = $Clog;

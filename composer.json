@@ -1,6 +1,6 @@
 
 {
-    "name": "eden/log",    
+    "name": "toeswade/log",    
     "type": "library",
     "description": "Small group of classes to build upon. Logs timestamps in code",
     "keywords": ["logger", "education"],
@@ -16,6 +16,6 @@
         "php": ">=5.4"
     },
     "autoload": {
-        "psr-4": { "Eden\\": "src/" }
+        "psr-4": { "Toeswade\\": "src/" }
     }
 }

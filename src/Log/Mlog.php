@@ -1,6 +1,6 @@
 <?php
 
-namespace Eden\Log;
+namespace Toeswade\Log;
 
 /**
  * Mlog

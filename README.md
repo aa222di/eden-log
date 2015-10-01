@@ -9,7 +9,7 @@ This class has no dependencies and can easily be implemented in any project. It 
 Create the $Clog object in the top of your script
 
 ```php
-$Clog = new Eden\Log\Clog();
+$Clog = new Toeswade\Log\Clog();
 ```
 
 Later use it in the classes you want to log . Note that the logger has to be accessible from your class
@@ -19,7 +19,7 @@ class Test
 {
 	private $logger;
 
-	public function __construct( \Eden\Log\Clog $Clog) {
+	public function __construct( \Toeswade\Log\Clog $Clog) {
 		$this->logger = $Clog;
 	}
 

@@ -11,9 +11,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once('../autoloader.php');
 
-$Clog = new Eden\Log\Clog();
+$Clog = new Toeswade\Log\Clog();
 
-$testLogger = new Eden\Test\Test(4, 2, $Clog);
+$testLogger = new Toeswade\Test\Test(4, 2, $Clog);
 
 $test1 = $testLogger->test1();
 $test2 = $testLogger->test2();
