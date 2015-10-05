@@ -52,12 +52,12 @@ Once you have downloaded that package add the logger to your DI-container
 
 ```php
         $this->setShared('logger', function () {
-            $filter = new \Toeswade\Log\Clog();
-            return $filter;
+            $logger = new \Toeswade\Log\Clog();
+            return $logger;
         });
 ```
 
-Then you can use it to set timestamps whereever you need in your code. For example in src/ThemeEngine/CThemeBasic
+Then you can use it to set timestamps where ever you need in your code. For example in src/ThemeEngine/CThemeBasic
 
 ```php
     public function render()
@@ -70,7 +70,7 @@ Then you can use it to set timestamps whereever you need in your code. For examp
     }
 ```
 
-To see you log just echo it at the end of your script 
+To see your log just echo it at the end of your script 
 
 ```php
 // Render the response using theme engine.
