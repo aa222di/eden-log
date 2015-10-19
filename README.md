@@ -86,3 +86,5 @@ Note that the code in webroot and src/Test isn't necessary for the package to wo
 
 This class is part of a task in the course phpmvc at BTH, Sweden.
 
+## Tests
+
