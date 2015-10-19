@@ -88,3 +88,7 @@ This class is part of a task in the course phpmvc at BTH, Sweden.
 
 ## Tests
 
+[![Build Status](https://travis-ci.org/aa222di/toeswade-log.svg?branch=master)](https://travis-ci.org/aa222di/toeswade-log)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aa222di/toeswade-log/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aa222di/toeswade-log/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/aa222di/toeswade-log/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/aa222di/toeswade-log/?branch=master)
+
