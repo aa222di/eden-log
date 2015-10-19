@@ -18,7 +18,11 @@ class CLog
 		$this->view = new Vlog();
 	}
 
-
+	/* Adds a timestamp to array
+	 * Example $Clog->stamp(__CLASS__, __METHOD__, 'Method starts');
+	 * 
+	 * @return string
+	 */
 	public function stamp($domain, $where, $comment=null) {
 		$this->model->Timestamp($domain, $where, $comment);
 	}
@@ -35,6 +39,16 @@ class CLog
 		$pageLoadTime = $this->model->getPageLoadTime();
 
 		return $this->view->renderTimestampAsTable($timestamps, $memorypeak, $pageLoadTime);
+	}
+
+
+	/*
+	 * Returns all the timestamps as an array
+	 */
+	public function getLogAsArray() {
+
+		return $this->model->getTimestamps();
+
 	}
 
 	/*
