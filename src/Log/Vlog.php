@@ -22,8 +22,13 @@ class VLog
     // Make sure the timestamps are sorted in the expected format
     if(isset($timestamps[0]) && isset($timestamps[0]['domain']) && isset($timestamps[0]['where']) && isset($timestamps[0]['when']) && isset($timestamps[0]['memory'])) {
 
-      $prev = $first = $timestamps[0]['when'];
+      $first = $timestamps[0]['when'];
       $last = $timestamps[count($timestamps) - 1]['when'];
+
+      if($last === $first) {
+        $last = microtime(true);
+      }
+
       $html = "<div class='log' style='background-color:#fff; color:#000; margin-top:50px; padding:20px;'><table class=table><h2>Timestamps</h2><tr><th>Domain</th><th>Where</th><th>When (sec)</th><th>Duration (sec)</th><th>Percent</th><th>Memory (MB)</th><th>Memory peak (MB)</th><th>Comment</th></tr>";
       $right = ' style="text-align: right;"';
       $total = array('domain' => array(), 'where' => array());
@@ -36,7 +41,6 @@ class VLog
         $peak     = isset($val['memory-peak']) ? round($val['memory-peak'] / 1024 / 1024, 2) : NULL;
         $when     = round($when, 3);
         $html .= "<tr><td>{$val['domain']}</td><td>{$val['where']}</td><td{$right}>{$when}</td><td{$right}>{$duration}</td><td{$right}>{$percent}</td><td{$right}>{$memory}</td><td{$right}>{$peak}</td><td>{$val['comment']}</td></tr>";
-        $prev = $val['when'];
         @$total['domain'][$val['domain']] += $duration;
         @$total['where'][$val['where']] += $duration;
       }
@@ -74,14 +78,6 @@ class VLog
 	public function noLog() {
 		$html = "<p>No timestamps have been logged. Log is empty.</p>";
 		return $html;
-	}
-
-
-	/*
-	* Test if class is loaded
-	*/
-	public function saySomething($word) {
-		echo $word;
 	}
 
 }

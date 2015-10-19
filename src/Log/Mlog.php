@@ -83,14 +83,4 @@ class MLog
     //$html = "<p>Peek memory consumption was {$peek} MB.</p>";
     return $peak;
   }
-
-
-
-	/*
-	* Test if class is loaded
-	*/
-	public function saySomething($word) {
-		echo $word;
-	}
-
 }

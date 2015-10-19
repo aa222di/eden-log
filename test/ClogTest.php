@@ -45,7 +45,7 @@ class ClogTest extends \PHPUnit_Framework_TestCase
      * @return void
      *
      */
-    public function testRenderLog() 
+    public function testRenderLogFail() 
     {
         
         $Clog = new \Toeswade\Log\Clog();

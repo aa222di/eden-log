@@ -51,13 +51,4 @@ class CLog
 
 	}
 
-	/*
-	* Test if class is loaded
-	*/
-	public function saySomething($word) {
-		$this->model->saySomething('model:' . $word . "<br>");
-		$this->view->saySomething('view:' . $word . "<br>");
-		echo ('controller:' . $word);
-	}
-
 }
