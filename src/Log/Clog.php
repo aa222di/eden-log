@@ -19,7 +19,7 @@ class CLog
 	}
 
 	/* Adds a timestamp to array
-	 * Example $Clog->stamp(__CLASS__, __METHOD__, 'Method starts');
+	 * Example Clog->stamp(__CLASS__, __METHOD__, 'Method starts')
 	 * 
 	 * @return string
 	 */

@@ -80,7 +80,6 @@ class MLog
    */
   public function getMemoryPeak() {
     $peak = round(memory_get_peak_usage(true) / 1024 / 1024, 2);
-    //$html = "<p>Peek memory consumption was {$peek} MB.</p>";
     return $peak;
   }
 }

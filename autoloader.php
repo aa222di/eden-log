@@ -13,7 +13,7 @@
  */
 spl_autoload_register(function ($class) {
     // project-specific namespace prefix
-    //$prefix = 'Foo\\Bar\\';
+    // Example :'Foo\\Bar\\';
     $prefix = 'Toeswade\\';
     // base directory for the namespace prefix
     $base_dir = __DIR__ . '/src/';
